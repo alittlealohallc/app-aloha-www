@@ -1,0 +1,63 @@
+# customs.yaml — source of truth for this build
+
+# ── PROJECT IDENTITY ─────────────────────────────────────────────────────────
+prefaceId: "apps"
+clientId: "alittlealohallc"
+appId: "www"
+tier: "1"
+
+# ── SITE METADATA ────────────────────────────────────────────────────────────
+site_name: "A Little Aloha LLC"
+site_tagline: "Enterprise-grade IT. Solo-practice pricing."
+site_description: "25+ years of enterprise infrastructure experience, applied to your small business. Hosting, code review, documentation, and website builds — flat-fee, fully documented."
+domain: "alittlealoha.pro"
+
+# ── AUTHOR / OWNER INFORMATION ───────────────────────────────────────────────
+author_name: "Kent Schaeffer"
+author_role: "Sole Member/Owner"
+contact_email: "kent@alittlealoha.pro"
+linkedin_url: ""
+github_url: ""
+
+# ── DESIGN ────────────────────────────────────────────────────────────────────
+design_source: "client-supplied"
+colors:
+  primary: "#008000"
+  bg: "#fffdf8"
+  surface: "#ffffff"
+  text: "#1a1a1a"
+  text_muted: "#5a5a52"
+  border: "#e7e2d6"
+fonts:
+  heading: "Charter, Georgia, serif"
+  body: "Chakra Petch (fonts.bunny.net)"
+  ui: "Sarina (fonts.bunny.net) — script accent only, not for body/nav"
+
+# ── CONTENT SCOPE ─────────────────────────────────────────────────────────────
+pages:
+  - name: "Home"
+    slug: "/"
+    sections: ["Hero", "Services", "About", "Contact"]
+fallback_contact_email: "kent@alittlealoha.pro"
+
+# ── CONTACT FORM ──────────────────────────────────────────────────────────────
+contact_form:
+  needed: true
+  fields: ["name", "email", "message", "attachment (optional file upload)"]
+  file_upload_needed: true
+  integration_pattern: "vanilla-js-ajax"
+  formspree_endpoint: "https://formspree.io/f/xyegjpzq"
+
+# ── DEPLOYMENT ────────────────────────────────────────────────────────────────
+cloudflare_project_name: "alittlealohallc-www"
+github_repo_created: false
+
+# ── SECRETS APPROACH ─────────────────────────────────────────────────────────
+secrets_store: "github-actions+wrangler"
+
+# ── STANDARDS VERIFICATION ────────────────────────────────────────────────────
+standards_verified_on: "2026-08-14"
+wcag_version_confirmed: "2.2 AA (2.1 AA is the more common legal baseline; targeting 2.2 AA)"
+core_web_vitals_confirmed: true
+wrangler_version_pinned: "^4.120.0"
+node_version_pinned: "22"

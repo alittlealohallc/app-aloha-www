@@ -1,0 +1,2 @@
+# Canonicalize www -> apex. Flip this if you'd rather www be canonical.
+https://www.alittlealoha.pro/* https://alittlealoha.pro/:splat 301!

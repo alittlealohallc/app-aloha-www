@@ -1,0 +1,43 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: HTML validation
+        run: npx --yes html-validate public/index.html
+
+      - name: Accessibility check (axe-core via Pa11y)
+        run: |
+          npx --yes http-server public -p 8080 -s &
+          sleep 2
+          npx --yes pa11y http://localhost:8080/index.html --standard WCAG2AA
+
+      - name: Check security headers file exists
+        run: |
+          test -f public/_headers || (echo "Missing public/_headers" && exit 1)
+          grep -q "Content-Security-Policy" public/_headers
+          grep -q "Strict-Transport-Security" public/_headers
+
+      - name: Check required SEO/meta files
+        run: |
+          test -f public/robots.txt
+          test -f public/sitemap.xml
+          test -f public/site.webmanifest
+
+  # This workflow validates only. Deployment is a deliberate separate step —
+  # run `npm run deploy` locally or hand this repo to Claude Code to finish.

@@ -1,0 +1,13 @@
+{
+  "name": "apps-alittlealohallc-www",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Little Aloha LLC marketing site — Tier 1 static build",
+  "scripts": {
+    "dev": "npx wrangler pages dev public",
+    "deploy": "npx wrangler pages deploy public --project-name=alittlealohallc-www"
+  },
+  "devDependencies": {
+    "wrangler": "^4.120.0"
+  }
+}
