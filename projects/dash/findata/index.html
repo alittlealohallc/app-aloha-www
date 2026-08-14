@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Credit Union & Banking Dashboard - Personal & Business Account Research Tool">
+  <meta name="author" content="A Little Aloha LLC">
+  <title>Findata Research Dashboard | Credit Union & Banking Analysis</title>
+  
+  <!-- LOCAL STYLESHEET ONLY - No external CDN requests -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- No preconnect to external domains - protects user IP from data-selling corporations -->
+  <!-- Google Fonts, Microsoft CDN, AWS CloudFront, jsDelivr - all excluded per privacy requirements -->
+</head>
+<body>
+  <!-- Skip Navigation Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- PAGE HEADER -->
+  <header role="banner">
+    <h1>Findata Research Dashboard</h1>
+    <p class="subtitle">Personal &amp; Business Banking Institution Analysis</p>
+    <time datetime="2026-08-02">Research Active Since July 2026</time>
+  </header>
+
+  <!-- MAIN LAYOUT CONTAINER -->
+  <div class="layout-container">
+    
+    <!-- SIDEBAR NAVIGATION (Tab System) -->
+    <nav class="sidebar" role="navigation" aria-label="Dashboard navigation">
+      <ul class="tab-list" role="tablist">
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn active" 
+            data-tab="overview" 
+            role="tab" 
+            aria-selected="true" 
+            aria-controls="overview-pane"
+            id="tab-overview"
+          >Overview</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="institutions" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="institutions-pane"
+            id="tab-institutions"
+            tabindex="-1"
+          >Institutions</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="personal-accounts" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="personal-accounts-pane"
+            id="tab-personal-accounts"
+            tabindex="-1"
+          >Personal Accounts</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="business-accounts" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="business-accounts-pane"
+            id="tab-business-accounts"
+            tabindex="-1"
+          >Business Accounts</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="credit-cards" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="credit-cards-pane"
+            id="tab-credit-cards"
+            tabindex="-1"
+          >Credit Cards</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="loans" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="loans-pane"
+            id="tab-loans"
+            tabindex="-1"
+          >Loans</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="merchant-services" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="merchant-services-pane"
+            id="tab-merchant-services"
+            tabindex="-1"
+          >Merchant Services</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="compliance" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="compliance-pane"
+            id="tab-compliance"
+            tabindex="-1"
+          >Compliance Flags</button>
+        </li>
+        <li role="presentation">
+          <button 
+            type="button"
+            class="tab-btn" 
+            data-tab="reference" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="reference-pane"
+            id="tab-reference"
+            tabindex="-1"
+          >Reference</button>
+        </li>
+      </ul>
+      
+      <!-- Export Actions -->
+      <div class="export-actions" role="region" aria-label="Export options">
+        <button type="button" id="export-json" class="btn-export btn-export--json">Export JSON</button>
+        <button type="button" id="export-csv" class="btn-export btn-export--csv">Export CSV</button>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content" class="content" role="main" aria-label="Dashboard content">
+      
+      <!-- OVERVIEW TAB PANE -->
+      <section id="overview-pane" class="tab-pane active" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+        <header class="pane-header">
+          <h2>Research Overview</h2>
+          <p class="status-indicator">
+            <span class="status-badge status-badge--active">Active Research</span>
+            <span>Last Updated: <time datetime="2026-08-02">August 2, 2026</time></span>
+          </p>
+        </header>
+        
+        <!-- KPI CARDS GRID -->
+        <article class="kpi-grid" aria-label="Key Metrics Summary">
+          <div class="kpi-card kpi-card--primary">
+            <h3>Institutions Researched</h3>
+            <div class="kpi-value">104<span class="kpi-unit"> total</span></div>
+            <p class="kpi-detail">100 Top-100 List + 4 Supplementary</p>
+          </div>
+          
+          <div class="kpi-card kpi-card--secondary">
+            <h3>Fully Verified</h3>
+            <div class="kpi-value">5<span class="kpi-unit"> institutions</span></div>
+            <p class="kpi-detail">Complete account-level data</p>
+          </div>
+          
+          <div class="kpi-card kpi-card--tertiary">
+            <h3>Compliance Filters</h3>
+            <div class="kpi-value">15<span class="kpi-unit"> checks</span></div>
+            <p class="kpi-detail">All soft-tag framework applied</p>
+          </div>
+          
+          <div class="kpi-card kpi-card--warning">
+            <h3>Framework Findings</h3>
+            <div class="kpi-value">7<span class="kpi-unit"> insights</span></div>
+            <p class="kpi-detail">Mergers, geo-restrictions, duplications</p>
+          </div>
+        </article>
+
+        <!-- RESEARCH STATUS SUMMARY -->
+        <article class="research-summary" aria-labelledby="research-status-heading">
+          <h3 id="research-status-heading">Research Status Breakdown</h3>
+          <div class="status-chart-container">
+            <table class="status-table">
+              <caption>Detailed research completion metrics per institution</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Status Level</th>
+                  <th scope="col">Label</th>
+                  <th scope="col">Count</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>id: 4</code></td><td>URL Registry Built + Key Facts</td><td>92</td><td>Core baseline for all institutions</td></tr>
+                <tr><td><code>id: 2</code></td><td>Partial Live Verified</td><td>6</td><td>Account data partially fetched</td></tr>
+                <tr><td><code>id: 5</code></td><td>Fully Verified</td><td>5</td><td>Complete Prompt A/B research</td></tr>
+                <tr><td><code>id: 3</code></td><td>Blocked Partial</td><td>1</td><td>Canyon View FCU (robots.txt)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- FRAMEWORK FINDINGS ALERTS -->
+        <fieldset class="findings-alerts">
+          <legend>Recent Framework Findings (<a href="#tab-reference" class="findings-link">View All →</a>)</legend>
+          <div class="finding-item finding-item--critical"><strong>Merge Alert:</strong> DCU + First Tech FCU merged effective Jan 1, 2026</div>
+          <div class="finding-item finding-item--warning"><strong>Name Collision:</strong> Affinity Plus has 3 different credit unions in different states</div>
+          <div class="finding-item finding-item--info"><strong>State-Specific Fees:</strong> Citibank fee schedules vary by state (no single national figure valid)</div>
+        </fieldset>
+      </section>
+
+      <!-- INSTITUTIONS TAB PANE -->
+      <section id="institutions-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-institutions" hidden tabindex="0">
+        <header class="pane-header">
+          <h2>Financial Institutions Directory</h2>
+          <div class="filter-controls" role="search" aria-label="Filter institutions">
+            <label for="institution-search" class="visually-hidden">Search institutions</label>
+            <input type="search" id="institution-search" placeholder="Search by name..." class="search-input">
+            <select id="type-filter" class="filter-select" aria-label="Filter by institution type">
+              <option value="all">All Types</option>
+              <option value="credit-union">Credit Unions</option>
+              <option value="bank">Banks</option>
+              <option value="neobank">Neobanks/Fintechs</option>
+            </select>
+            <select id="lds-filter" class="filter-select" aria-label="Filter by LDS affiliation">
+              <option value="all">Include All</option>
+              <option value="exclude">Exclude LDS-Affiliated</option>
+              <option value="current">LDS Current Only</option>
+              <option value="historical">LDS Historical Only</option>
+            </select>
+          </div>
+        </header>
+
+        <article class="institution-grid" aria-live="polite">
+          <!-- Static example for development - JavaScript will populate fully -->
+          <article class="institution-card" data-inst-id="navy-federal-cu">
+            <header class="card-header">
+              <div class="institution-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z"/></svg>
+              </div>
+              <h3>Navy Federal Credit Union</h3>
+              <span class="badge badge--credit-union">Credit Union</span>
+            </header>
+            <div class="card-body">
+              <dl class="data-points">
+                <div><dt>NCUA Insured</dt><dd>✓ Yes</dd></div>
+                <div><dt>Min Balance</dt><dd>$5 (checking)</dd></div>
+                <div><dt>Monthly Fee</dt><dd>Waivable</dd></div>
+                <div><dt>LDS Affiliation</dt><dd class="flag-current-affiliation">Current</dd></div>
+                <div><dt>Research Status</dt><dd><code>fully_verified</code></dd></div>
+              </dl>
+              <footer class="card-footer">
+                <a href="https://www.navyfederal.org" target="_blank" rel="noopener noreferrer">Visit Website<span class="visually-hidden">(opens in new tab)</span></a>
+              </footer>
+            </div>
+          </article>
+        </article>
+      </section>
+
+      <!-- PERSONAL ACCOUNTS TAB PANE -->
+      <section id="personal-accounts-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-personal-accounts" hidden tabindex="0">
+        <header class="pane-header">
+          <h2>Personal Banking Products</h2>
+          <div class="sort-controls">
+            <label for="sort-personal">Sort by:</label>
+            <select id="sort-personal" class="sort-select">
+              <option value="name">Institution Name</option>
+              <option value="apy-desc">APY (Highest First)</option>
+              <option value="fee-asc">Monthly Fee (Lowest First)</option>
+              <option value="min-balance">Min Balance</option>
+            </select>
+          </div>
+        </header>
+
+        <div class="product-tabs" role="tablist" aria-label="Personal account types">
+          <button type="button" class="product-tab active" data-product="checking">Checking</button>
+          <button type="button" class="product-tab" data-product="savings">Savings</button>
+          <button type="button" class="product-tab" data-product="money-market">Money Market</button>
+          <button type="button" class="product-tab" data-product="cd">CDs</button>
+        </div>
+
+        <article class="products-table-container">
+          <table class="data-table" id="personal-accounts-table" aria-describedby="personal-accounts-description">
+            <caption class="visually-hidden">Personal banking account details including APY, fees, and minimum balance requirements</caption>
+            <thead>
+              <tr>
+                <th scope="col">Institution</th>
+                <th scope="col">Product Type</th>
+                <th scope="col">APY (%)</th>
+                <th scope="col">Min Open ($)</th>
+                <th scope="col">Min Keep ($)</th>
+                <th scope="col">Monthly Fee ($)</th>
+                <th scope="col">Fee Waiver Conditions</th>
+                <th scope="col">Cash Access</th>
+                <th scope="col">Compliance Tags</th>
+                <th scope="col">Details</th>
+              </tr>
+            </thead>
+            <tbody><!-- Rows rendered via JavaScript --></tbody>
+          </table>
+          <p id="personal-accounts-description" class="table-footnote">APY rates accurate as of research date. Monthly fees shown are base fees before waiver conditions. Compliance tags follow the findata v4.0 soft-tag framework.</p>
+        </article>
+      </section>
+
+      <!-- BUSINESS ACCOUNTS TAB PANE -->
+      <section id="business-accounts-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-business-accounts" hidden tabindex="0">
+        <header class="pane-header">
+          <h2>Business Banking Products</h2>
+          <p class="disclaimer-text"><strong>Note:</strong> Some institutions restrict business accounts to specific geographic fields of membership (FOM). Verify eligibility before applying.</p>
+        </header>
+
+        <div class="business-product-tabs" role="tablist" aria-label="Business product categories">
+          <button type="button" class="business-tab active" data-category="all">All Products</button>
+          <button type="button" class="business-tab" data-category="checking">Business Checking</button>
+          <button type="button" class="business-tab" data-category="savings">Business Savings</button>
+          <button type="button" class="business-tab" data-category="merchant">Merchant Services</button>
+          <button type="button" class="business-tab" data-category="loans">Business Loans</button>
+        </div>
+
+        <article class="business-products-grid" aria-live="polite"><!-- Dynamic card rendering area --></article>
+      </section>
+
+      <!-- CREDIT CARDS TAB PANE -->
+      <section id="credit-cards-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-credit-cards" hidden tabindex="0">
+        <header class="pane-header">
+          <h2>Business Credit Cards</h2>
+          <div class="apry-warning"><p><strong>Annual Percentage Rate (APR) Warning:</strong> Rates shown are variable ranges based on borrower creditworthiness. Actual APR may differ.</p></div>
+        </header>
+
+        <article class="cards-table-container">
+          <table class="data-table" id="credit-cards-table">
+            <caption>Business credit card offerings with APR ranges and annual fees</caption>
+            <thead>
+              <tr>
+                <th scope="col">Institution</th>
+                <th scope="col">Card Name</th>
+                <th scope="col">Network</th>
+                <th scope="col">APR Range</th>
+                <th scope="col">Annual Fee</th>
+                <th scope="col">Rewards Structure</th>
+                <th scope="col">Intro Offer</th>
+                <th scope="col">Compliance Notes</th>
+              </tr>
+            </thead>
+            <tbody><!-- Dynamically populated --></tbody>
+          </table>
+        </article>
+      </section>
+
+      <!-- LOANS TAB PANE -->
+      <section id="loans-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-loans" hidden tabindex="0">
+        <header class="pane-header">
+          <h2>Business Loan Products</h2>
+        </header>
+
+        <div class="loan-type-filters" role="group" aria-label="Filter by loan type">
+          <button type="button" class="loan-filter active" data-type="all">All Types</button>
+          <button type="button" class="loan-filter" data-type="sba">SBA Loans</button>
+          <button type="button" class="loan-filter" data-type="line-of-credit">Lines of Credit</button>
+          <button type="button" class="loan-filter" data-type="equipment">Equipment Financing</button>
+          <button type="button" class="loan-filter" data-type="invoice">Invoice Factoring</button>
+        </div>
+
+        <article class="loans-accordion" id="loans-accordion"><!-- Accordion items rendered via JavaScript --></article>
+      </section>
+
+      <!-- MERCHANT SERVICES TAB PANE -->
+      <section id="merchant-services-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-merchant-services" hidden tabindex="0">
+        <header class="pane-header">
+          <h2>Merchant Payment Processing</h2>
+          <p class="feature-note">For detailed rate sheets, please refer to individual institution pages or contact directly.</p>
+        </header>
+
+        <article class="merchant-services-table-container">
+          <table class="data-table" id="merchant-services-table">
+            <caption>Merchant services platforms with setup fees and transaction rates</caption>
+            <thead>
+              <tr>
+                <th scope="col">Institution</th>
+                <th scope="col">Platform Name</th>
+                <th scope="col">Setup Fee</th>
+                <th scope="col">Hardware Cost</th>
+                <th scope="col">Transaction Fees</th>
+                <th scope="col">Contract Terms</th>
+                <th scope="col">Availability Status</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody><!-- Dynamic content --></tbody>
+          </table>
+        </article>
+      </section>
+
+      <!-- COMPLIANCE TAB PANE -->
+      <section id="compliance-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-compliance" hidden tabindex="0">
+        <header class="pane-header">
+          <h2>Compliance Filter Framework</h2>
+          <p>This view shows all institutions filtered by the findata v4.0 soft-tag compliance framework.</p>
+        </header>
+
+        <fieldset class="compliance-filter-group" role="searchbox" aria-label="Compliance filter toggles">
+          <legend>Toggle Compliance Checks</legend>
+          <div class="filter-toggle-grid">
+            <div class="toggle-item"><input type="checkbox" id="filter-lds" class="filter-checkbox" checked><label for="filter-lds">Exclude LDS-Affiliated</label></div>
+            <div class="toggle-item"><input type="checkbox" id="filter-min-balance" class="filter-checkbox" checked><label for="filter-min-balance">Min Balance ≤$100</label></div>
+            <div class="toggle-item"><input type="checkbox" id="filter-monthly-fee" class="filter-checkbox" checked><label for="filter-monthly-fee">No Monthly Fee</label></div>
+            <div class="toggle-item"><input type="checkbox" id="filter-nsf-od" class="filter-checkbox" checked><label for="filter-nsf-od">$0 NSF/Overdraft</label></div>
+            <div class="toggle-item"><input type="checkbox" id="filter-cash-access" class="filter-checkbox" checked><label for="filter-cash-access">Cash Access Available</label></div>
+            <div class="toggle-item"><input type="checkbox" id="filter-no-fraud" class="filter-checkbox" checked><label for="filter-no-fraud">No Recent Fraud Actions</label></div>
+            <div class="toggle-item"><input type="checkbox" id="filter-us-legal" class="filter-checkbox" checked><label for="filter-us-legal">FDIC/NCUA/FinCEN Compliant</label></div>
+            <div class="toggle-item"><input type="checkbox" id="filter-slcc-presence" class="filter-checkbox"><label for="filter-slcc-presence">Salt Lake County Branch</label></div>
+          </div>
+        </fieldset>
+
+        <article class="compliance-results" id="compliance-results" aria-live="polite"><!-- Results table dynamically updated --></article>
+      </section>
+
+      <!-- REFERENCE TAB PANE -->
+      <section id="reference-pane" class="tab-pane" role="tabpanel" aria-labelledby="tab-reference" hidden tabindex="0">
+        <article class="reference-content">
+          <section class="reference-section">
+            <h2>Glossary of Terms</h2>
+            <dl class="glossary-grid">
+              <div class="glossary-item"><dt>APY</dt><dd><strong>Annual Percentage Yield</strong> — Total interest earned over one year, including compounding effects.</dd></div>
+              <div class="glossary-item"><dt>APR</dt><dd><strong>Annual Percentage Rate</strong> — Annualized interest rate charged on loans or credit card balances.</dd></div>
+              <div class="glossary-item"><dt>NCUA</dt><dd><strong>National Credit Union Administration</strong> — U.S. government agency that insures credit union deposits up to $250,000.</dd></div>
+              <div class="glossary-item"><dt>FDIC</dt><dd><strong>Federal Deposit Insurance Corporation</strong> — U.S. government agency that insures bank deposits up to $250,000.</dd></div>
+              <div class="glossary-item"><dt>FinCEN</dt><dd><strong>Financial Crimes Enforcement Network</strong> — U.S. Treasury bureau that collects financial transaction reports.</dd></div>
+              <div class="glossary-item"><dt>FOM</dt><dd><strong>Field of Membership</strong> — Eligibility requirements for joining a credit union.</dd></div>
+              <div class="glossary-item"><dt>FBAR</dt><dd><strong>Report of Foreign Bank and Financial Accounts</strong> — IRS form required for foreign financial account reporting.</dd></div>
+              <div class="glossary-item"><dt>FATCA</dt><dd><strong>Foreign Account Tax Compliance Act</strong> — U.S. law requiring foreign financial institutions to report accounts held by U.S. persons.</dd></div>
+              <div class="glossary-item"><dt>NSF</dt><dd><strong>Non-Sufficient Funds</strong> — Fee charged when a transaction exceeds available balance.</dd></div>
+              <div class="glossary-item"><dt>CO-OP Shared Branching</dt><dd>Network allowing credit union members to conduct transactions at other participating credit union branches nationwide.</dd></div>
+            </dl>
+          </section>
+
+          <section class="reference-section">
+            <h2>Harvard Sourcing Methodology</h2>
+            <p>The research framework applies an 8-criteria Harvard-style scoring system for ranking sources:</p>
+            <table class="methodology-table">
+              <thead><tr><th scope="col">Criterion</th><th scope="col">Grade Scale</th><th scope="col">Weight</th></tr></thead>
+              <tbody>
+                <tr><td>AUTHOR</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+                <tr><td>CREDENTIALS</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+                <tr><td>PURPOSE</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+                <tr><td>PUBLISHER</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+                <tr><td>ACCURACY</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+                <tr><td>CURRENCY</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+                <tr><td>DESIGN</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+                <tr><td>REVIEW</td><td>A through F (with +/-)</td><td>12.5%</td></tr>
+              </tbody>
+            </table>
+            <p class="methodology-note"><em>Sources scored B+ or higher qualify for primary citation. Sources with PURPOSE ≤ C require mandatory cross-verification.</em></p>
+          </section>
+
+          <section class="reference-section">
+            <h2>Framework Findings Log</h2>
+            <div class="findings-log"><!-- Populated via JavaScript from findata-research-meta-v7.json --></div>
+          </section>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-branding">
+        <p><strong>A Little Aloha LLC</strong></p>
+        <p class="tagline">Simple solutions to complex technical problems.<br>Delivered With A Little Aloha.</p>
+      </div>
+      <div class="footer-locations">
+        <address>
+          <p>West Valley City, UT</p>
+          <p>Star Valley Ranch, WY</p>
+        </address>
+      </div>
+      <div class="footer-meta">
+        <p>Research Started: May 2026</p>
+        <p>Last Updated: <time datetime="2026-08-02">August 2, 2026</time></p>
+        <p class="version-info">Dashboard v2.0 | Data Schema v3-Normalized-Soft-Only</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LOCAL SCRIPT - No external CDN dependencies -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
