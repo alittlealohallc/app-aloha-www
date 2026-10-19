@@ -2,7 +2,7 @@
 
 Tier 1 static single-page marketing site for A Little Aloha LLC (DBA: Pro Services With A Little
 Aloha). Plain HTML5/CSS3, minimal vanilla JS, no framework, no build step. Built with the
-`alittlealoha-website-builder` skill.
+`alittlealoha-website-builder` Claude AI skill.
 
 - **Repo name:** `apps-alittlealohallc-www`
 - **Cloudflare Pages project:** `alittlealohallc-www`

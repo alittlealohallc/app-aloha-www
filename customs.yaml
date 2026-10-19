@@ -1,8 +1,8 @@
 # customs.yaml — source of truth for this build
 
 # ── PROJECT IDENTITY ─────────────────────────────────────────────────────────
-prefaceId: "apps"
-clientId: "alittlealohallc"
+prefaceId: "app"
+clientId: "aloha"
 appId: "www"
 tier: "1"
 
@@ -16,8 +16,9 @@ domain: "alittlealoha.pro"
 author_name: "Kent Schaeffer"
 author_role: "Sole Member/Owner"
 contact_email: "kent@alittlealoha.pro"
-linkedin_url: ""
-github_url: ""
+linkedin_url: "https://www.linkedin.com/company/a-little-aloha-llc"
+github_url: "https://github.com/alittlealohallc"
+
 
 # ── DESIGN ────────────────────────────────────────────────────────────────────
 design_source: "client-supplied"
@@ -38,7 +39,7 @@ pages:
   - name: "Home"
     slug: "/"
     sections: ["Hero", "Services", "About", "Contact"]
-fallback_contact_email: "kent@alittlealoha.pro"
+fallback_contact_email: "hello@alittlealoha.pro"
 
 # ── CONTACT FORM ──────────────────────────────────────────────────────────────
 contact_form:
@@ -49,7 +50,7 @@ contact_form:
   formspree_endpoint: "https://formspree.io/f/xyegjpzq"
 
 # ── DEPLOYMENT ────────────────────────────────────────────────────────────────
-cloudflare_project_name: "alittlealohallc-www"
+cloudflare_project_name: "app-aloha-www"
 github_repo_created: false
 
 # ── SECRETS APPROACH ─────────────────────────────────────────────────────────
