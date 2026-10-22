@@ -1,0 +1,172 @@
+---
+title: "A Little Aloha Website Redesign"
+business: "A Little Aloha LLC"
+dba: "Pro Services With A Little Aloha"
+owner: "Kent Schaeffer"
+location: "West Valley City, Utah (ZIP 84120)"
+updated: "2026-10-22"
+version: "3.0"
+---
+
+# A Little Aloha LLC Design Review Prompts
+
+## Overall Review v2.0
+
+### Input Artifacts Uploaded
+
+- `alittlealoha-website-builder.zip`: Claude skill to build website using pre-defined content and customer-provided customizations via `customs.yaml`
+- `duck-website-redesign-v2.md`: DuckDuckGo response to request for website redesign questions
+- `pro-with-a-little-aloha-clear-shadow.svg`: business logo specifically built for website use
+- `business-plan.mdx`: Business plan from August, 2026
+- `customer-pricing-sheet.mdx`: Customer pricing sheet from August, 2026
+- `marketing-plan.mdx`: Business Marketing Plan from August, 2026
+- `pricing-sheet.mdx`: internal pricing sheet from August, 2026
+- `purpose-statement.mdx`: Business Purpose Statement from August, 2026
+- `wrangler.jsonc`: Wrangler/Cloudflare deployment script from website v1.0
+- `customs.yaml`: customer (myself) customizations for website content and design
+- text below under this section: prompt instructions for Claude to analyze current website and attached documents to create new website design and output files
+
+### Scenario Review v2.0
+
+I like the body font types and dark scope, however, it looks very formal and not creative 
+enough for me. The Headliner font type should not be used at all, only in the logo.
+I guess I didn't articulate this well enough, but I want this a subtle mix of engineering
+know-how with creative design. I guess I wanted it to look a little more colorful, something 
+like the [GitHub](https://github.com) landing page - dark and colorful background; boxes with 
+visible borders, rounded corners, and dark boxes have lit up outer padding and backgrounds; 
+animated transitions that load fast; top menu bar doesn't look cluttered; each section starts
+with action or benefit phrases: "Accelerate your entire workflow", "Automate your path to 
+production", "Built-in application security"; Footer in a single line, small print, contact 
+info with small icons only
+
+From [Really Good Designs](https://reallygooddesigns.com/creative-minimalist-website-examples/):
+
+```text
+Minimalist web design focuses on clarity and simplicity, ensuring that content stands out and the user experience remains smooth and intuitive. Here’s what makes minimalist websites effective and visually compelling:
+
+ Clean Layouts ✨: Minimalist designs prioritize simplicity, using structured grids and clear sections to keep the interface tidy and visually appealing.
+Ample White Space ✨ : Negative space around elements emphasizes content, reduces visual noise, and provides a calm, uncluttered feel to the site.
+Limited Color Palette ✨ : Minimalist websites often use neutral tones or monochromatic schemes with occasional pops of color to draw attention to key elements.
+Simple Typography ✨ : Sans-serif fonts are commonly used for their clean and modern look. Typography is often included as a design element, with bold sizes or distinct styles.
+Focus on Content ✨ : The minimalist approach ensures that text, images, or videos stand out by eliminating distracting elements.
+Streamlined Navigation ✨ : Menus are simple and easy to find, often featuring just a few links or collapsible elements like burger menus to maintain a tidy appearance.
+High-Quality Visuals ✨ : Images and videos are central to minimalist designs. Large, crisp visuals are used to tell the story or showcase products.
+Subtle Animations ✨ : Smooth animations, like hover effects or subtle transitions, add a modern touch without overpowering the site’s simplicity.
+Responsive Design ✨ : Minimalist sites prioritize adaptability, ensuring they look great and function well across all devices.
+Fast Loading Speeds ✨ : With fewer elements and optimized visuals, minimalist websites load quickly, improving the user experience and boosting SEO performance.
+```
+
+### Next Steps
+
+1. ingest the following files and integrate into your business, marketing, pricig plan
+    - logo: pro-with-a-little-aloha-clear-shadow.svg
+    - business plan: business-plan.mdx
+    - pricing sheets: customer-pricing-sheet.mdx, pricing-sheet.mdx
+    - marketing plan: marketing-plan.mdx
+    - purpose statement: purpose-statement.mdx
+    - customs.yaml: `customs.yaml` for v1 of https://alittlealoha.pro, updated with current GitHub repo: https://github.com/alittlealohallc/apps-aloha-www.git
+    - deployment script: wrangler.jsonc, not updated to match new app/repo name (please update)
+2. Build three new prototypes that have a good mixture of technical depth and creative design
+    - new content from ingested/integrated decisions
+    - cover space full size with DBA: "Pro Services With A Little Aloha" as sub header and tagline as body text: "simple solutions to complex technical problems"; background: image from unsplash.com; all items centered
+    - if using a menu, use A-spec: place on top, shorten links to one-word only
+    - verify all data, statistics, current pricing below agency/enterprise - one advantage is enterprise-level engineering at small-business pricing; keep pricing rounded: $500 not $499
+    - keep form content and functionality as-is, but fix code; all prototypes had floating field on top of the "name" field; rename "unsure" service to "other - describe in Message"
+    - shorten Process to three steps
+    - reword section headers to action or benefit words
+    - use B-spec layout (centered content)
+    - minimize repeated phrasing between sections, like "Human-designed, built, deployed, and maintainted"
+    - Footer: single-line, <copyright> A Little Aloha LLC  <home icon href="apple-maps:west valley city, utah"> West Valley City, Utah, USA <email icon href="#contact"> <Github icon href="https://github.com/alittlealohallc"> <linkedin icon href="https://www.linkedin.com/company/a-little-aloha-llc"> 
+
+### Output files downloaded
+
+- `aloha-business-content.zip`: Claude skill to provide Claude with business and owner information to allow Claude to provide more applicable responses and content
+- `business-plan.mdx`: Business plan updated
+- `customer-pricing-sheet.mdx`: Customer pricing sheet updated
+- `marketing-plan.mdx`: Business Marketing Plan updated
+- `pricing-sheet.mdx`: internal pricing sheet updated
+- `documents-odt.zip`: ODT versions (LibreOffice) of above files
+
+---
+
+## Design Review v3.0
+
+### Initial Prompt
+
+**Two Questions:**
+
+1. is the pricing aimed at local to Utah, nationally, or International? Please do the research for all three, verify benchmarks and sources, compare pricing to Pro through Business ranges and align if similar
+2. Please help me clarify one way or the other: one of my selling points is minimal vendor lock-in, but then I note Cloudflare and GitHub are what I use. It might be good to mention several I have worked with, but I don’t want to lock-in
+
+**Responses to v2.0 questions**
+1. I use Cambria 10pt with 0.7” margins, but often tell agents to use the 12pt font to ensure content stays within required spacing (I.e., 2 page resume), and content often overflows anyway
+2. I think I need to make an effort to at least start on the lower end of the agency pricing range, as this is one of my selling points - enterprise grade at small business pricing
+3. Please complete research on design & graphics pricing in case that is something a client asks for.
+CFPS. None were accepted. Is it better to list or remove?
+Benchmarks. Verify all
+
+### Input files Uploaded
+
+- All output files from Review v2.0
+
+---
+
+## Design Review v4.0
+
+### Scenario v4.0
+
+Ran out of tokens before Claude could answer. New questions, asks after more careful review of website design. No change in input or output files at this point
+
+### Design changes
+
+These are suggestions from developer QA engineer
+
+- Clean up Hero page
+    - make logo 2x larger in menu navbar, replace "contact" with "book consultation" on navbar button, make navbar about 20% more translucent
+    - hero background looks static - move colors around like a live video or replace with a background photo of ocean waves
+    - Remove logo, price estimate button, start with consultation button, remove "free consultation" text, spread out rest of text
+    - Remove hovering down arrow at bottom of section, or replace with a larger arrow with "services"
+- Entire website changes
+    - Remove the harsh black borders on buttons, replace with no borders, or same color as button background
+    - replace ugly background transitions between sections, with seemless transitions
+    - Shorten wording - this is a marketing site to capture service requests, not offer a book to read. Action words and short phrases that capture the eye and convert browsing to buying
+    - remove the price estimate button, functions, and all references to a price estimator. Replace the button with a "home" button with a logo of a home or up-arrow that hides while in hero section and unhides in all other sections - scrolls page back to hero section
+    - services and pricing sections seem like they should either be separated or together on one section. Remove pricing from services section and maybe build pricing section similar to [bluehost](https://www.bluehost.com/pricing) where several plans and package deals are listed with a checkbox to the left with a "request consultation" button at the bottom of the section that pre-fills the contact form with the service interest field and populates the textarea field with text including the package, service, and/or plan selected
+    - Place any source data in footnote notation with an in-line hyperlinked special character that scrolls down to bottom of section or the word/phrase hyperlink that opens a pop-up window, like the "Free domain (first year)" links on the bluehost pricing page 
+
+### Design Answers
+
+#### Conflicts
+
+1. The "book consultation" button seems plenty vibrant as a bright green button on a black (dark) background. If you like, you can build button-like backgrounds with glow around each navbar item, and highlight the item when in that section (bolded and enlarged text, or underline under item text). 
+2. I meant to clarify that Services and pricing sections have a different purpose. Using Bluehost as an example:
+    - services section should only show cards or expands with product/plan/package/service title (most common defaulted or first) and button or expand link shows more details
+        [bluehost services](https://www.bluehost.com) - see home page cards for "build with wordpress", "host anything on vps", etc
+    - pricing section starts with tab-buttons for each service category and each tab shows short bullet items of what is included and with monthly or project price range
+        [bluehost pricing](https://www.bluehost.com/pricing?tab=12+Months)
+3. I think I should keep the Price Estimator function, rename to "Help Me Choose" button and pop-up quiz similar to the Bluehost homepage, asking 3 questions: Business goals (pricing levels), Service Category, services or products: [Help Me Choose](https://www.bluehost.com/#)
+4. perfect. do it.
+5. ditto.
+6. okay.
+
+#### Questions
+
+1. Hero: DBA as headline, tagline: "simple solutions to complex technical problems, With A Little Aloha", scroll button: Services arrow
+2. Background photo: photo with slow motion, assume this photo: https://unsplash.com/photos/sea-waves-ceITO2rlDgc
+3. "from $X"+ or with range
+4. See conflicts#2 above, about the tabbed view/router option, or accordions for each service category, include "multiple". Or if it's easier, replace the pull-down select in the form to one checkbox each for service categories
+5. I know, i changed my mind. The black borders are visible and seem a little less professional. Please only remove from buttons
+6. the "one-line" market comparison is actually three rows with tightened content column. Convert all extra text or full pricing info to pop-up or Footnotes
+7. Up arrow (or carat ^) icon for home button
+8. Which is the "why" section? Are you talking about "Fix what's slowing your business down" section (services)? Yes, keep the five cards: place logo and service category in the card header and text summary (and maybe example offerings) in card body. There could be a single button under the offerings for "book consultation". Also, there are currently 7 FAQs
+9. Yes, please compare against Utah, US, and international as context only
+10. Your recommendation. 
+
+#### Quick Answers
+
+- vendor lock-in: That is my misunderstanding. I thought "lock-in" also meant a single proprietary vendor. Would "minimal vendor lock-in" sound better?
+- font: after download, i'll convert all 12pt to 10pt, giving a little more room, but updating the skill also helps.
+
+#### More Notes
+
+- These sections look lost: "Work with an engineer..." and "Go from first call...". Maybe they could be combined and replaced with something similar to the "Included with Bluehost AI Website Builder..." section on this [page](https://www.bluehost.com/compare/bluehost-vs-squarespace-blueprint-ai)?
